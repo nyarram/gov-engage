@@ -1,0 +1,45 @@
+psql -U nikhilyarram -d political_engagement
+\l
+\c political_engagement
+\d
+\d users
+\d officials
+SELECT * FROM officials;
+SELECT * FROM users;
+\q
+
+
+//Clear all data but keep tables
+TRUNCATE officials, users RESTART IDENTITY CASCADE;
+
+
+
+
+
+
+No, you should not remove any tables. Your database looks correct! Here’s what each item means:
+
+Name	Type	Purpose
+users	Table	Stores user locations (IP, country, city, etc.).
+officials	Table	Stores government officials tied to users.
+users_id_seq	Sequence	Automatically increments id in users.
+officials_id_seq	Sequence	Automatically increments id in officials.
+Should You Remove officials_id_seq and users_id_seq?
+🚫 No! These sequences are required for PostgreSQL to auto-increment IDs in the users and officials tables.
+
+
+
+
+
+Explanation of Each Database
+Database Name	Purpose
+postgres	Default database (always exists, used for administrative tasks).
+template0	A read-only system template for creating new databases.
+template1	The default template used when you create a new database (political_engagement was created from this).
+political_engagement	Your actual project database where all data is stored.
+Should You Delete template0 and template1?
+🚫 No! PostgreSQL needs these templates to create new databases. If you delete them, it could cause issues when creating new databases in the future.
+
+Should You Delete postgres?
+🚫 No!
+The postgres database is the default administrative database. It's best to leave it as is, even if you don’t use it.

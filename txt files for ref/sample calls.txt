@@ -1,0 +1,5 @@
+San Francisco → http://localhost:8080?ip=192.119.0.1
+Chicago (Default) → http://localhost:8080
+New York → http://localhost:8080?ip=104.15.0.3
+New Delhi → http://localhost:8080?ip=103.24.0.4
+Chennai → http://localhost:8080?ip=117.204.0.5
