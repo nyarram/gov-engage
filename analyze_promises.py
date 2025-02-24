@@ -30,7 +30,7 @@ def categorize_promises(promises):
     return categorized
 
 # Load scraped promises
-politician = "Narendra Modi"  # Change this to test other politicians
+politician = "K. Chandrashekar Rao"  # Change this to test other politicians
 with open(f"{politician}_promises.json", "r") as f:
     promises = json.load(f)
 

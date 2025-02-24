@@ -42,7 +42,7 @@ def track_promise_progress(politician, categorized_promises):
     return progress_tracking
 
 # Load categorized promises
-politician = "Narendra Modi"  # Change to test other politicians
+politician = "K. Chandrashekar Rao"  # Change to test other politicians
 with open(f"{politician}_categorized_promises.json", "r") as f:
     categorized_promises = json.load(f)
 

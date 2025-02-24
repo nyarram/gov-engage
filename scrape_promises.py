@@ -79,7 +79,7 @@ def scrape_promises_via_api(politician_name, country="USA"):
     return promises
 
 # Test with a politician
-politician = "Narendra Modi"
+politician = "K. Chandrashekar Rao"
 start_time = time.time()
 promises = scrape_promises_via_api(politician, "India")
 end_time = time.time()
